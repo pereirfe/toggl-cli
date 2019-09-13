@@ -1,0 +1,13 @@
+#!/bin/bash
+
+tglnull() {
+    # Start zelas coding toggl
+    if [[ -v ESCALE_ENV ]]
+    then
+        toggl start --project NULL --tags Escale
+    else
+        toggl start --project NULL
+    fi
+}
+
+tglnull

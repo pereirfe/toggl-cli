@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Start zelas meeting. First argument is meeting Name
+meeting_name="${1^}"
+
+if [[ -v ESCALE_ENV ]]
+then
+    toggl start --project Zelas --tags Meeting,Escale,Work $meeting_name
+else
+    toggl start --project Zelas --tags Meeting,Work $meeting_name
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+tglz() {
+    # Start zelas coding toggl
+    if [[ -v ESCALE_ENV ]]
+    then
+        toggl start --project Zelas --tags Coding,Escale,Work
+    else
+        toggl start --project Zelas --tags Coding,Work
+    fi
+}
+
+tglz
