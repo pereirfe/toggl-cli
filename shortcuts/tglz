@@ -1,13 +1,13 @@
 #!/bin/bash
 
-tglz() {
-    # Start zelas coding toggl
-    if [[ -v ESCALE_ENV ]]
-    then
-        toggl start --project Zelas --tags Coding,Escale,Work
-    else
-        toggl start --project Zelas --tags Coding,Work
-    fi
-}
+# Start zelas work. First argument is a label for it
+meeting_name="${1,,}"
+meeting_name="${meeting_name^}"
 
-tglz
+# Start zelas coding toggl
+if [[ -v ESCALE_ENV ]]
+then
+    toggl start --project Zelas --tags Coding,Escale,Work $meeting_name
+else
+    toggl start --project Zelas --tags Coding,Work $meeting_name
+fi
