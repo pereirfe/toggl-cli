@@ -11,7 +11,7 @@ fi
 
 if [[ -v ESCALE_ENV ]]
 then
-    toggl start --project GTD --tags 'Meta Work',Escale,Work $meeting_name
+    toggl start --project GTD --tags 'Meta Work',Escale,Work "${meeting_name}"
 else
-    toggl start --project GTD --tags 'Meta Work',Work $meeting_name
+    toggl start --project GTD --tags 'Meta Work',Work "${meeting_name}"
 fi

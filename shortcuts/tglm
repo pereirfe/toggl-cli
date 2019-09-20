@@ -6,7 +6,7 @@ meeting_name="${meeting_name^}"
 
 if [[ -v ESCALE_ENV ]]
 then
-    toggl start --project Zelas --tags Meeting,Escale,Work $meeting_name
+    toggl start --project Zelas --tags Meeting,Escale,Work "${meeting_name}"
 else
-    toggl start --project Zelas --tags Meeting,Work $meeting_name
+    toggl start --project Zelas --tags Meeting,Work "${meeting_name}"
 fi
